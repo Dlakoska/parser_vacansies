@@ -1,4 +1,3 @@
-import time
 from src.api import HH
 from src.dbmanager import DBManager
 from src.utils import connect, create_tables, loads_into_table, drop_table
@@ -21,7 +20,6 @@ def main():
         hh_api.load_vacancies(int(page_quantity))
     else:
         print(f'вы ввели неверный параметр, по умолчанию будет загружено 20 страниц')
-        time.sleep(1)
         hh_api.load_vacancies()
 
     vacancies_list = hh_api.vacancies
